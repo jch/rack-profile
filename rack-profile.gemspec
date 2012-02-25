@@ -34,16 +34,18 @@ Gem::Specification.new do |s|
      "spec/spec_helper.rb"
   ]
 
+  ruby_prof_version = "0.11.0"
+
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<ruby-prof>, ["= 0.7.3"])
+      s.add_runtime_dependency(%q<ruby-prof>, ["= #{ruby_prof_version}"])
     else
-      s.add_dependency(%q<ruby-prof>, ["= 0.7.3"])
+      s.add_dependency(%q<ruby-prof>, ["= #{ruby_prof_version}"])
     end
   else
-    s.add_dependency(%q<ruby-prof>, ["= 0.7.3"])
+    s.add_dependency(%q<ruby-prof>, ["= #{ruby_prof_version}"])
   end
 end
